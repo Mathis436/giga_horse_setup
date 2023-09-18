@@ -30,21 +30,6 @@ echo "alias plow='~/plow.py'" >> .bashrc
 echo "alias plot='~/cuplot.sh'" >> .bashrc
 echo "alias mount='~/mount.sh'" >> .bashrc
 source .bashrc
-
-echo "#!/usr/bin/env python" >> replace.py
-echo "import sys" >> replace.py
-echo "import os" >> replace.py
-echo "import tempfile" >> replace.py
-echo "" >> replace.py
-echo "tmp=tempfile.mkstemp()" >> replace.py
-echo "" >> replace.py
-echo "with open(sys.argv[1]) as fd1, open(tmp[1],'w') as fd2:" >> replace.py
-echo "    for line in fd1:" >> replace.py
-echo '        line = line.replace('SOURCES = []','SOURCES = ["/mnt/temp"]')' >> replace.py
-echo '        line = line.replace('DESTS = []','DESTS = ["/mnt/cache1","/mnt/cache2","/mnt/cache3","/mnt/cache4","/mnt/cache5"]')' >> replace.py
-echo "        fd2.write(line)" >> replace.py
-echo "" >> replace.py
-echo "os.rename(tmp[1],sys.argv[1])" >> replace.py
 sudo chmod 777 replace.py
 python3 ./replace.py plow.py
 
