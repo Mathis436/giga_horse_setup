@@ -33,3 +33,4 @@ source .bashrc
 sudo chmod 777 replace.py
 python3 ./replace.py plow.py
 sudo chmod 777 ./plow.py
+sudo reboot now
