@@ -1,5 +1,5 @@
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install nvidia-driver-535 unzip nvtop screen vim htop sysstat qemu-guest-agent nfs-common git python3-aionotify libgomp1 ocl-icd-libopencl1 rsync nano -y
+sudo apt install nvidia-driver-535 unzip nvtop screen htop sysstat qemu-guest-agent nfs-common git python3-aionotify libgomp1 ocl-icd-libopencl1 rsync nano -y
 wget https://github.com/madMAx43v3r/chia-gigahorse/archive/refs/heads/master.zip
 unzip master.zip
 mv chia-gigahorse-master chia-gigahorse
